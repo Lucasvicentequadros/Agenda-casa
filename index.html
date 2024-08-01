@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="login-message"></div>
+    </div>
+    <div class="admin-container" id="admin-container" style="display: none;">
+        <h1>Admin Panel</h1>
+        <form id="registerForm">
+            <label for="new-username">New Username:</label>
+            <input type="text" id="new-username" name="new-username" required>
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <label for="new-email">Email:</label>
+            <input type="email" id="new-email" name="new-email" required>
+            <button type="submit">Create User</button>
+        </form>
+        <div id="register-message"></div>
+    </div>
+    <div class="scheduler-container" id="scheduler-container" style="display: none;">
+        <h1>Service Scheduler</h1>
+        <form id="serviceForm">
+            <label for="service-date">Date:</label>
+            <input type="date" id="service-date" name="service-date" required>
+            <label for="service-description">Description:</label>
+            <input type="text" id="service-description" name="service-description" required>
+            <button type="submit">Add Service</button>
+        </form>
+        <div id="service-message"></div>
+        <h2>Scheduled Services</h2>
+        <div id="services-list"></div>
+    </div>
+    <div id="calendar-container" style="display: none;">
+        <div id="calendar"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
